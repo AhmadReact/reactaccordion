@@ -1,0 +1,27 @@
+import React, { useState } from "react";
+
+
+
+const MyAccordian = ({original_title,overview}) =>{
+const [show,setshow] = useState(false);
+
+return(
+<>
+
+<div className="main-heading">
+
+<button  onClick={()=>setshow(!show)}>  {show?"➕" : "➖" }</button>
+<h3>{original_title}</h3>
+
+</div>
+{ show && <p>{overview}</p>}
+<hr></hr></>
+
+
+)
+
+
+}
+
+
+export default MyAccordian;
